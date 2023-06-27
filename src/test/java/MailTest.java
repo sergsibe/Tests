@@ -70,6 +70,7 @@ public class MailTest {
         assertEquals("stones instead of iPhone", packBack.getContent().getContent());
     }
 
+
     /*
     Тестируем выброс исключения если в посылке оружие
     и проверяем сообщение этого исключения

@@ -276,6 +276,7 @@ public class Mail {
 
     public static class Inspector implements MailService {
 
+
         public Sendable processMail(Sendable mail) throws IllegalPackageException {
             if (mail.getClass() == MailPackage.class) {
                 MailPackage mailPackage = (MailPackage) mail;
