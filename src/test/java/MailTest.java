@@ -18,9 +18,8 @@ public class MailTest {
     }
 
     @Test
-    void testPackage() { //тест упаковки контента в мейлпакеты
-        Mail.Package mailPackage = Mockito.mock(Mail.Package.class);
-        when(mailPackage.getContent()).thenReturn("iPhone");
+    void testPackage() { //content packaging test
+        Mail.Package mailPackage = new Mail.Package("iPhone", 1000);
         assertEquals("iPhone", mailPackage.getContent());
     }
     @Test
