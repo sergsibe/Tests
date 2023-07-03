@@ -11,6 +11,8 @@ import static org.mockito.Mockito.*;
 import static org.example.Mail.*;
 import static org.example.Mail.Package;
 
+
+
 public class MailTest {
     @Test
     void testPackage() { //content packaging test
