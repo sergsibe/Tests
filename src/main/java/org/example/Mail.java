@@ -8,17 +8,6 @@ public class Mail {
     public static final String WEAPONS = "weapons";
     public static final String BANNED_SUBSTANCE = "banned substance";
 
-
-    public static void main(String[] args) {
-
-        Package box = new Package("1234 1234 1234  1234", 20);
-
-        Sendable mail = new MailPackage("Moskow", "Kazan", box);
-
-        MailService inspector = new Inspector();
-        inspector.processMail(mail);
-    }
-
     public static interface Sendable {
         String getFrom();
         String getTo();

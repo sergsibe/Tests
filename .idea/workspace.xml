@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="Replacement RealMailService for UntrustworthyMailWorke">
+    <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="Add import static Mail.*">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MailTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Mail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688387712021</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add import static Mail.*">
+      <created>1688388668409</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688388668409</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,7 +313,8 @@
     <MESSAGE value="delete mock for mailPackage" />
     <MESSAGE value="test delivery service fix" />
     <MESSAGE value="Replacement RealMailService for UntrustworthyMailWorke" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replacement RealMailService for UntrustworthyMailWorke" />
+    <MESSAGE value="Add import static Mail.*" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add import static Mail.*" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
