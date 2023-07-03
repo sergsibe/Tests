@@ -31,17 +31,18 @@ public class MailTest {
 
 
     /*
-    Тест работы недоверенного почтальена.
-    Если он перемешивает посылки, то возвращается null
+    Test untrustworthy mailworker.
+    Untrustworthy mailworker sends mail to all mailservice
+    and returns the result of the last delivery.
     */
     @Test
     void testUntrustworthyMailWorker() {
-        Mail.MailPackage mailPackage = Mockito.mock(Mail.MailPackage.class);
-        Mail.RealMailService realMailService1 = Mockito.mock(Mail.RealMailService.class);
-        Mail.RealMailService realMailService2 = Mockito.mock(Mail.RealMailService.class);
-        Mail.MailService[] mailServices = {realMailService1,realMailService2};
+        Mail.Sendable mailMessage1 = new Mail.MailMessage("Berlin", "Moskow", "Iphone");
+        Mail.RealMailService realMailService1 = new Mail.RealMailService();
+        Mail.RealMailService realMailService2 = new Mail.RealMailService();
+        Mail.RealMailService[] mailServices = {realMailService1,realMailService2};
         Mail.UntrustworthyMailWorker untrustworthyMailWorker = new Mail.UntrustworthyMailWorker(mailServices);
-        assertEquals(null, untrustworthyMailWorker.processMail(mailPackage));
+        assertEquals(realMailService2.processMail(mailMessage1), untrustworthyMailWorker.processMail(mailMessage1));
     }
 
     /*
