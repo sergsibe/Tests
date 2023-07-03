@@ -8,6 +8,8 @@ import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+import static org.example.Mail.*;
+import static org.example.Mail.Package;
 
 public class MailTest {
 
@@ -19,13 +21,13 @@ public class MailTest {
 
     @Test
     void testPackage() { //content packaging test
-        Mail.Package mailPackage = new Mail.Package("iPhone", 1000);
+        Package mailPackage = new Package("iPhone", 1000);
         assertEquals("iPhone", mailPackage.getContent());
     }
     @Test
     void testRealMailService() { //test delivery service
-        Mail.Sendable mailMessage = new Mail.MailMessage("Berlin", "Moskow", "Iphone");
-        Mail.RealMailService realMailService = new Mail.RealMailService();
+        Sendable mailMessage = new MailMessage("Berlin", "Moskow", "Iphone");
+        RealMailService realMailService = new RealMailService();
         Assertions.assertEquals(mailMessage, realMailService.processMail(mailMessage));
     }
 
@@ -37,11 +39,11 @@ public class MailTest {
     */
     @Test
     void testUntrustworthyMailWorker() {
-        Mail.Sendable mailMessage1 = new Mail.MailMessage("Berlin", "Moskow", "Iphone");
-        Mail.RealMailService realMailService1 = new Mail.RealMailService();
-        Mail.RealMailService realMailService2 = new Mail.RealMailService();
-        Mail.RealMailService[] mailServices = {realMailService1,realMailService2};
-        Mail.UntrustworthyMailWorker untrustworthyMailWorker = new Mail.UntrustworthyMailWorker(mailServices);
+        Sendable mailMessage1 = new MailMessage("Berlin", "Moskow", "Iphone");
+        RealMailService realMailService1 = new RealMailService();
+        RealMailService realMailService2 = new RealMailService();
+        RealMailService[] mailServices = {realMailService1,realMailService2};
+        UntrustworthyMailWorker untrustworthyMailWorker = new UntrustworthyMailWorker(mailServices);
         assertEquals(realMailService2.processMail(mailMessage1), untrustworthyMailWorker.processMail(mailMessage1));
     }
 
@@ -51,9 +53,9 @@ public class MailTest {
      */
     @Test
     void testSpy() {
-        Mail.MailMessage mailMessage = new Mail.MailMessage(Mail.AUSTIN_POWERS,"mailTo","mailContent");
+        MailMessage mailMessage = new MailMessage(Mail.AUSTIN_POWERS,"mailTo","mailContent");
         Logger log = Mockito.mock(Logger.class);
-        Mail.Spy spy = new Mail.Spy(log);
+        Spy spy = new Spy(log);
         spy.processMail(mailMessage);
         verify(log).log(Level.WARNING,
                 "Detected target mail correspondence: from {0} to {1} {2}",
@@ -62,11 +64,11 @@ public class MailTest {
 
     @Test
     void testTief() { // Проверяем что Tief ворует посылки (дороже 999 в данном случае)
-        Mail.Package pack = new Mail.Package("iPhone", 1000);
-        Mail.Sendable mailPackage = new Mail.MailPackage("Berlin", "Moskow", pack);
-        Mail.Tief tief = new Mail.Tief(999);
+        Package pack = new Package("iPhone", 1000);
+        Sendable mailPackage = new MailPackage("Berlin", "Moskow", pack);
+        Tief tief = new Tief(999);
         // Для вызова getContent требуется приведение из интерфейса Sendable к его реализации MailPackage
-        Mail.MailPackage packBack = (Mail.MailPackage)tief.processMail(mailPackage);
+        MailPackage packBack = (MailPackage)tief.processMail(mailPackage);
         assertEquals("stones instead of iPhone", packBack.getContent().getContent());
     }
 
@@ -77,10 +79,10 @@ public class MailTest {
      */
     @Test()
       void testInspector() {
-        Mail.Package pack = new Mail.Package(Mail.WEAPONS, 1000);
-        Mail.Sendable mailPackage = new Mail.MailPackage("Berlin", "Moskow", pack);
-        Mail.Inspector inspector = new Mail.Inspector();
-        Exception exception = assertThrows(Mail.IllegalPackageException.class, () -> {
+        Package pack = new Package(Mail.WEAPONS, 1000);
+        Sendable mailPackage = new MailPackage("Berlin", "Moskow", pack);
+        Inspector inspector = new Inspector();
+        Exception exception = assertThrows(IllegalPackageException.class, () -> {
             inspector.processMail(mailPackage);
         });
         String expectedMessage = "IllegalPackage";

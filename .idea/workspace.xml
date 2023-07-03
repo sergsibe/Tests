@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="test delivery service fix">
+    <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="Replacement RealMailService for UntrustworthyMailWorke">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MailTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/MailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MailTest.class" afterDir="false" />
@@ -68,7 +68,7 @@
       <recent name="C:\Users\s.siben\IdeaProjects\Tests\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MailTest.testUntrustworthyMailWorker">
+  <component name="RunManager" selected="JUnit.MailTest.testTief">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Mail" />
       <module name="Tests" />
@@ -128,10 +128,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MailTest.testTief" />
         <item itemvalue="JUnit.MailTest.testUntrustworthyMailWorker" />
         <item itemvalue="JUnit.MailTest.testRealMailService" />
         <item itemvalue="JUnit.MailTest.testPackage" />
-        <item itemvalue="JUnit.MailTest.testTief" />
         <item itemvalue="JUnit.MailTest.testSpy" />
       </list>
     </recent_temporary>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688385280961</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Replacement RealMailService for UntrustworthyMailWorke">
+      <created>1688387712021</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688387712021</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,7 +306,8 @@
     <MESSAGE value="add test in dev" />
     <MESSAGE value="delete mock for mailPackage" />
     <MESSAGE value="test delivery service fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="test delivery service fix" />
+    <MESSAGE value="Replacement RealMailService for UntrustworthyMailWorke" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replacement RealMailService for UntrustworthyMailWorke" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
