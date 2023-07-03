@@ -4,7 +4,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Mail {
-    public static final String AUSTIN_POWERS = "Austin Powers";
     public static final String WEAPONS = "weapons";
     public static final String BANNED_SUBSTANCE = "banned substance";
 
@@ -185,6 +184,9 @@ public class Mail {
 
         @Override
         public Sendable processMail(Sendable mail) {
+            return mail;
+        }
+        public Sendable processMail(Sendable mail, String target) {
 
             if (mail.getClass() == MailMessage.class) {
 
@@ -193,7 +195,7 @@ public class Mail {
                 String from = mailMessage.getFrom();
                 String to = mailMessage.getTo();
 
-                if (from.equals(AUSTIN_POWERS) || to.equals(AUSTIN_POWERS)) {
+                if (from.equals(target) || to.equals(target)) {
                     LOGGER.log(Level.WARNING,
                             "Detected target mail correspondence: from {0} to {1} {2}",
                             new Object[]{mailMessage.getFrom(), mailMessage.getTo(), mailMessage.getMessage()});

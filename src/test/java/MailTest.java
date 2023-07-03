@@ -12,13 +12,6 @@ import static org.example.Mail.*;
 import static org.example.Mail.Package;
 
 public class MailTest {
-
-    @Test
-    void testMailClass() { //пробую мокито на вкус
-        Mail mail = Mockito.mock(Mail.class);
-        assertEquals("weapons", mail.WEAPONS);
-    }
-
     @Test
     void testPackage() { //content packaging test
         Package mailPackage = new Package("iPhone", 1000);
@@ -53,13 +46,14 @@ public class MailTest {
      */
     @Test
     void testSpy() {
-        MailMessage mailMessage = new MailMessage(Mail.AUSTIN_POWERS,"mailTo","mailContent");
+        String target = "Austin Powers";
+        MailMessage mailMessage = new MailMessage("Austin Powers","mailTo","mailContent");
         Logger log = Mockito.mock(Logger.class);
         Spy spy = new Spy(log);
-        spy.processMail(mailMessage);
+        spy.processMail(mailMessage, target);
         verify(log).log(Level.WARNING,
                 "Detected target mail correspondence: from {0} to {1} {2}",
-                new Object[]{mailMessage.getFrom(), mailMessage.getTo(), mailMessage.getMessage()});
+                new Object[]{target, mailMessage.getTo(), mailMessage.getMessage()});
     }
 
     @Test

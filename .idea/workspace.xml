@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="Add import static Mail.*">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Mail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$AbstractSendable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$AbstractSendable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$IllegalPackageException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$IllegalPackageException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$Inspector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$Inspector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$MailMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$MailMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$MailPackage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$MailPackage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$Package.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$Package.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$RealMailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$RealMailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$Spy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$Spy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$StolenPackageException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$StolenPackageException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$Tief.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$Tief.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$UntrustworthyMailWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$UntrustworthyMailWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MailTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +82,7 @@
       <recent name="C:\Users\s.siben\IdeaProjects\Tests\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MailTest.testTief">
+  <component name="RunManager" selected="JUnit.MailTest.testSpy">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Mail" />
       <module name="Tests" />
@@ -127,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MailTest.testSpy" />
         <item itemvalue="JUnit.MailTest.testTief" />
         <item itemvalue="JUnit.MailTest.testUntrustworthyMailWorker" />
         <item itemvalue="JUnit.MailTest.testRealMailService" />
         <item itemvalue="JUnit.MailTest.testPackage" />
-        <item itemvalue="JUnit.MailTest.testSpy" />
       </list>
     </recent_temporary>
   </component>
