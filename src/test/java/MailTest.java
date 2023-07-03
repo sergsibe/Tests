@@ -23,10 +23,10 @@ public class MailTest {
         assertEquals("iPhone", mailPackage.getContent());
     }
     @Test
-    void testRealMailService() { //тест сервиса доставки
-        Mail.MailMessage mailMessage = Mockito.mock(Mail.MailMessage.class);
-        Mail.RealMailService realMailService = Mockito.mock(Mail.RealMailService.class);
-        Assertions.assertEquals(null, realMailService.processMail(mailMessage));
+    void testRealMailService() { //test delivery service
+        Mail.Sendable mailMessage = new Mail.MailMessage("Berlin", "Moskow", "Iphone");
+        Mail.RealMailService realMailService = new Mail.RealMailService();
+        Assertions.assertEquals(mailMessage, realMailService.processMail(mailMessage));
     }
 
 

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="add test in dev">
+    <list default="true" id="be53033e-8dd3-4d0f-bf43-691638a5015a" name="Changes" comment="delete mock for mailPackage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MailTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Mail$Inspector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Mail$Inspector.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,20 +68,10 @@
       <recent name="C:\Users\s.siben\IdeaProjects\Tests\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MailTest.testPackage">
+  <component name="RunManager" selected="JUnit.MailTest.testRealMailService">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Mail" />
       <module name="Tests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MailTest.testInspector" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MailTest" />
-      <option name="METHOD_NAME" value="testInspector" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,6 +81,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MailTest" />
       <option name="METHOD_NAME" value="testPackage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailTest.testRealMailService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MailTest" />
+      <option name="METHOD_NAME" value="testRealMailService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MailTest.testRealMailService" />
         <item itemvalue="JUnit.MailTest.testPackage" />
         <item itemvalue="JUnit.MailTest.testUntrustworthyMailWorker" />
         <item itemvalue="JUnit.MailTest.testTief" />
         <item itemvalue="JUnit.MailTest.testSpy" />
-        <item itemvalue="JUnit.MailTest.testInspector" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687882616833</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="delete mock for mailPackage">
+      <created>1688133893158</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688133893158</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +290,8 @@
     <MESSAGE value="Rollback" />
     <MESSAGE value="add Test" />
     <MESSAGE value="add test in dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test in dev" />
+    <MESSAGE value="delete mock for mailPackage" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete mock for mailPackage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
